@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedDoc</title>
+    <link rel="icon" href="/Referance/Images/Logo.png">
+
+    <!---StyleSheet--------->
+    <link rel="stylesheet" href="Home.css">
+
+    <!----FontPacks--------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!---Icon Pack--------->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+    
+    <section class="title">
+        <img class="logoOne" src="/Referance/Images/Logo.png" alt="MedDoc">
+        <p class="scroll">Scroll Down</p>
+        <img class="Arrow" src="/Referance/icons/down-chevron.png" alt="Down">
+    </section>
+
+    <section class="home" id="Home">
+
+        <div class="navBar">
+            <img class="logoTwo" src="/Referance/Images/Logo.png" alt="Logo">
+            <nav>
+                <!--Nav Bar-->
+                <ul><a href="#Home">Home</a></ul>
+                <ul><a href="#Features">Features</a></ul>
+                <ul><a href="#Contact-Us">Contact Us</a></ul>
+            </nav>
+        </div>
+
+        <div class="mainCtn">
+            <div class="mainText">
+                <h1>Welcome To New Innovative idea<br>and Helpful Platform <br>To save you Hospital Data's....</h1>
+                <a href="login.html" class="BtnOne">LogIn</a>
+                <div class="social">
+                    <a href="https://wa.link/6zqzdf"><i class="fa fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/__.anasu.__/"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/checkpoint/828281030927956/?next=https%3A%2F%2Fwww.facebook.com%2F"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.google.com/search?q=anasuddeen+pp&oq=anas&aqs=chrome.0.69i59l2j46i131i199i433i465i512j35i39j69i65j69i60l2j69i65.1043j0j4&sourceid=chrome&ie=UTF-8"><i class="fa fa-google"></i></a>
+                </div>
+            </div>
+    
+            <div class="mainImage">
+                <img class="homePic" src="/Referance/Images/HomePic.png" alt="homePic">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="Features" id="Features">
+        <div class="Fcontainer">
+            <h2 class="FeatureHead">Our Features</h2>
+
+            <div class="ctn">
+
+                <div class="col">
+                    <div class="circle">
+                        <img class="icons" src="/Referance/icons/notification.png" alt="Reminder">
+                    </div>
+                    <h4 class="headFour">Reminder</h4>
+                    <p class="des">Send a notification <br>message for all <br>user to have their Medicine</p>
+                    
+                </div>
+
+                <div class="col">
+                    <div class="circle">
+                        <img class="icons" src="/Referance/icons/chatbot.png" alt="ChatBot">
+                    </div>
+                    <h4 class="headFour">ChatBot</h4>
+                    <p class="des">Provide a ChatBot<br>Service in 24/7 to Help<br>Our Patients</p>
+                    
+                </div>
+
+                <div class="col">
+                    <div class="circle">
+                        <img class="icons" src="/Referance/icons/protect.png" alt="Secure">
+                    </div>
+                    <h4 class="headFour">Secure</h4>
+                    <p class="des">We are provide a<br>Highly Secure <br>Databases</p>
+                    
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="ContactUs" id="Contact-Us">
+        <div class="ContactUSForm">
+            <h3 class="contactHead">Contact Us</h3>
+            <p class="alert" id="out"><!---Error message Show here----></p>
+            <div class="contactForm">
+                <form id="contactForms" action="#">
+                    <input type="text" id="Name" placeholder="Your Name..."><br>
+                    <input type="number" id="Phone" placeholder="Your Phone..."><br>
+                    <textarea id="textArea" placeholder="Your Valuable Feedback" cols="30" rows="10"></textarea><br>
+                    <input type="submit" id="SubmitButton" value="Submit" class="contactSubmit" onclick="validateForm(event)">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault(); // Prevent the form from submitting
+    
+            var nameInput = document.getElementById("Name").value;
+            var phoneInput = document.getElementById("Phone").value;
+            var feedbackInput = document.getElementById("textArea").value;
+            var errorOutput = document.getElementById("out");
+    
+            errorOutput.textContent = "";
+            if (nameInput === "" || phoneInput === "" || feedbackInput === "") {
+                ///errorOutput.style.display="block";
+                ///errorOutput.style.backgroundColor = "red";
+                ///errorOutput.textContent = "All fields are required!";
+                alert("All fields are Required!");
+            }else {
+                //errorOutput.style.display= "block";
+               // errorOutput.style.backgroundColor = "green";
+                //errorOutput.textContent = "Form submitted successfully!";
+                alert("Form Submitted Successfully!");
+            }
+        }
+    </script>
+    
+
+
+
+</body>
+</html>
