@@ -121,15 +121,15 @@
     
             errorOutput.textContent = "";
             if (nameInput === "" || phoneInput === "" || feedbackInput === "") {
-                ///errorOutput.style.display="block";
-                ///errorOutput.style.backgroundColor = "red";
-                ///errorOutput.textContent = "All fields are required!";
-                alert("All fields are Required!");
+                errorOutput.style.display="block";
+                errorOutput.style.backgroundColor = "red";
+                errorOutput.textContent = "All fields are required!";
+                //alert("All fields are Required!");
             }else {
-                //errorOutput.style.display= "block";
-               // errorOutput.style.backgroundColor = "green";
-                //errorOutput.textContent = "Form submitted successfully!";
-                alert("Form Submitted Successfully!");
+                errorOutput.style.display= "block";
+                errorOutput.style.backgroundColor = "green";
+                errorOutput.textContent = "Form submitted successfully!";
+                //alert("Form Submitted Successfully!");
             }
         }
     </script>
